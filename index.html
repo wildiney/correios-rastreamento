@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html manifest="correios.manifest">
+  <head>
+  <title>Correios</title>
+  <meta charset="ISO-8859-1">
+  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+  <link rel="apple-touch-icon" href="imagens/icon_57x57.png"/>
+  <link rel="apple-touch-startup-image" href="imagens/startup.jpg" />
+
+  <link rel="stylesheet" href="tetris.css" type="text/css" media="screen, mobile" title="main" charset="utf-8">
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+  <style type="text/css">
+  	h1{font-size:1.5em; text-align:center;}
+  	#content{padding-bottom:80px;}
+  	.anuncio_wrapper{bottom:10px; position:absolute; left:0; margin-top:20px; width:100%; height:60px; background:#999; text-align:center;}
+    .anuncio{ margin:0 auto; padding:0; width:290px;}
+  	.custom_table{border:2px solid #000; border-collapse:collapse; font-size:0.7em; width:100%;}
+  	.custom_table td{border:1px solid #066; padding:2px;}
+    .center{text-align:center;}
+  </style>
+  <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+  <script type="text/javascript">
+	$(document).ready(function(){
+		$.mobile.loadingMessage  = "Carregando";
+    
+		$("#cod_rastreio").keypress(function(){
+			localStorage.setItem('cod',$("#cod_rastreio").val());
+			})
+		if(localStorage.getItem('cod')){
+			$("#cod_rastreio").val(localStorage.getItem('cod'));
+			}
+			
+  });
+  </script>
+	<!--SW451676414BR-->
+  </head>
+  <body>
+  <div data-role="page">
+    <div data-role="header">
+      <h1>Correios</h1>
+    </div>
+    <!-- /header -->
+    
+    <div id="content" data-role="content">
+    <h1>Rastreamento Correios</h1>
+      <p class="center">Digite o código com 13 dígitos.</p>
+      <form action="search.php" method="post" data-transition="slideup">
+        <div data-role="fieldcontain">
+          <label for="cod_rastreio"  class="ui-hidden-accessible">Código de Rastreio</label>
+          <input type="text" value="" name="cod_rastreio" id="cod_rastreio" placeholder="Código de Rastreio" maxlength="13" onKeyUp="this.value=this.value.toUpperCase();">
+        </div>
+        <button type="submit" >Enviar</button>
+      </form>
+      <div class="rastreamento">
+      </div>
+      <div class="anuncio_wrapper">
+      	<div class="anuncio">
+				<script type="text/javascript"><!--
+        google_ad_client = "ca-pub-3074448490604551";
+        /* 234 x 60 */
+        google_ad_slot = "8371756197";
+        google_ad_width = 234;
+        google_ad_height = 60;
+        //-->
+        </script>
+        <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+				</script>
+        </div>
+      </div>
+    </div>
+    <!-- /content --> 
+    
+  </div>
+  <!-- /page -->
+
+  </body>
+</html>
