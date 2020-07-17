@@ -1,3 +1,7 @@
+# DEPRECATED
+[![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
+
+
 # Correios - Rastreamento
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=SRWLKCPSZGQTJ)
 
